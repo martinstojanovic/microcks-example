@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "f26b0b89-c760-4ebd-a5d7-179694e55aa3",
+		"name": "Microcks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11822147"
+	},
+	"item": [
+		{
+			"name": "Example",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"field1\": \"input1\",\r\n        \"field2\": \"input2\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/example/method",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"example",
+						"method"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"field1\": \"value1\",\r\n        \"field2\": \"value2\"\r\n }\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/example/method",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"example",
+								"method"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"field1\": \"input1\",\n    \"field2\": \"input2\"\n}"
+				},
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"field1\": \"value1\",\r\n        \"field2\": \"value2\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/example/method",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"example",
+								"method"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n        \"errorCode\": \"1001\",\r\n        \"errorMessage\": \"Error occured.\"\r\n}"
+				}
+			]
+		}
+	]
+}
