@@ -1,25 +1,19 @@
 {
 	"info": {
 		"_postman_id": "f26b0b89-c760-4ebd-a5d7-179694e55aa3",
-		"name": "Microcks",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"name": "Example  - Query",
+		"description": "version=1.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "11822147"
 	},
 	"item": [
 		{
-			"name": "Example",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Query",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n        \"field1\": \"input1\",\r\n        \"field2\": \"input2\"\r\n}\r\n"
-				},
 				"url": {
-					"raw": "http://localhost:8080/example/method",
+					"raw": "http://localhost:8080/example/query/method?query=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -27,7 +21,14 @@
 					"port": "8080",
 					"path": [
 						"example",
+						"query",
 						"method"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "1"
+						}
 					]
 				}
 			},
@@ -37,12 +38,8 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"field1\": \"value1\",\r\n        \"field2\": \"value2\"\r\n }\r\n"
-						},
 						"url": {
-							"raw": "http://localhost:8080/example/method",
+							"raw": "http://localhost:8080/example/method?query=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -51,6 +48,12 @@
 							"path": [
 								"example",
 								"method"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -67,19 +70,15 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"field1\": \"input1\",\n    \"field2\": \"input2\"\n}"
+					"body": "{\n    \"field1\": \"value1\",\n    \"field2\": \"value2\"\n}"
 				},
 				{
 					"name": "Error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"field1\": \"value1\",\r\n        \"field2\": \"value2\"\r\n}\r\n"
-						},
 						"url": {
-							"raw": "http://localhost:8080/example/method",
+							"raw": "http://localhost:8080/example/method?query=0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -88,6 +87,12 @@
 							"path": [
 								"example",
 								"method"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "0"
+								}
 							]
 						}
 					},
